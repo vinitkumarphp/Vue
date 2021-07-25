@@ -5,6 +5,7 @@ const App1=Vue.createApp({
             link:'https://www.google.com/',
             messageA:"He is a voter.",
             messageB:"He is below 18.",
+            testHtml:'<h1> Welcome </h1>'
         };
     },
     methods:{
