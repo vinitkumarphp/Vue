@@ -20,6 +20,7 @@
             <div class="card">
                 <div class="card-body">
                {{name}}
+                <a v-bind:href="link"> Google </a> 
                 </div>
               </div>
         </div>
@@ -29,7 +30,8 @@
                 const App1=Vue.createApp({
                     data(){
                         return{
-                            name:"vinit kumar"
+                            name:"vinit kumar",
+                            link:'https://www.google.com/'
                         };
                     }
                 });
