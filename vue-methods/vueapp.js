@@ -2,18 +2,20 @@ const App1=Vue.createApp({
     data(){
         return{
             name:"vinit kumar",
-            link:'https://www.google.com/'
+            link:'https://www.google.com/',
+            messageA:"He is a voter.",
+            messageB:"He is below 18.",
         };
     },
     methods:{
 
         checkUser(){
 
-            var age=18;
+            var age=17;
             if(age>=18){
-                return "He is a voter.";
+                return this.messageA;
             }else{
-                return "He is below 18.";
+                return  this.messageB;
             }
         }
 
