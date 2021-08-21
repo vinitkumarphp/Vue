@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+
+      .bgstyle{
+        background-color:bisque;
+      }
+    </style>
+
+</head>
+<body>
+    
+    <div id="app" class="container">
+
+        <article class="message is-primary">
+            <div class="message-header">
+              <p>Primary</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+
+
+               
+                <div :class="AslClasses"   @click="setSelection('A')">   A    </div>
+                <div class="block" :class="{  bgstyle: Bsl}" @click="setSelection('B')">   B    </div>
+                <div class="block" :style="{backgroundColor: Csl? 'red':'#ccc'}" @click="setSelection('C')">   C    </div>
+
+               
+          </div>
+            </div>
+          </article>
+        
+        
+         
+
+    </div>
+    <script src="./app.js"></script>
+
+</body>
+</html>
