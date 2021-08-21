@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="container">
+
+
+<div id="app">
+    <div>
+        <label for="goal"> Goal</label>
+
+        <input type="text" name="" id="goal" v-model="enterValue">
+
+        <button  v-on:click="addGoal" >Add Goal</button>
+    </div>
+    
+    <ul>
+        <li v-for="goal in goals">{{goal}} </li>
+    </ul>
+    <p>{{courseGoal}}</p>
+    <p>{{showData()}}</p>
+
+    <a v-bind:href="pageLink">Google</a>
+
+</div>
+
+<script src="https://unpkg.com/vue@next"></script>
+
+<script src="./app.js"></script>
+       
+</body>
+</html>

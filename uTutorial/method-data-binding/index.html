@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    
+    <div id="app" class="container">
+
+        <article class="message is-primary">
+            <div class="message-header">
+              <p>Primary</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+
+
+                <input class="input is-primary" type="text" v-on:keyup="setName()" placeholder="Primary input">
+                <input class="input is-primary" type="text" v-on:keyup="setLastNamedata()" placeholder="Primary input">
+
+
+                <div class="block">
+                     {{name}}
+                  
+                </div>
+               
+               <div class="block">
+                Full Name   {{fullname}}
+               
+             </div>
+                <div class="block">
+                    Counter {{counter}}
+                  
+                </div>
+
+                  <div class="buttons">
+                <button class="button is-info is-3" v-on:click="add()" >Add</button>
+                <button class="button is-success is-3" v-on:click="sub()">Sub</button> 
+          </div>
+            </div>
+          </article>
+        
+        
+         
+
+    </div>
+    <script src="./app.js"></script>
+
+</body>
+</html>
