@@ -1,9 +1,10 @@
 <template>
     <article class="message is-primary">
         <div class="message-header">
-            <p>{{name}}</p>
+            <p>{{name}} <span v-if="friendIsfab"> ( Favoriate ) </span></p>
             <div class="control">
                 <button @click="setVisibleFriend" class="button is-link">Show / Hide Detail</button>
+                <button @click="toogleFavorite" class="button is-success">Toogle Favorite</button>
             </div>
             <button class="delete" aria-label="delete"></button>
         </div>
@@ -23,13 +24,15 @@
         props:[
             'name',
             'email',
-            'phone'
+            'phone',
+            'isFab'
         ],
         name: "FriendsList",
 
         data(){
             return{
-                isVisibleNow:false
+                isVisibleNow:false,
+                friendIsfab:this.isFab
             }
 
         },
@@ -37,7 +40,17 @@
         methods:{
             setVisibleFriend(){
                 this.isVisibleNow= !this.isVisibleNow;
+            },
+            toogleFavorite(){
+
+                if(this.friendIsfab==0){
+                    this.friendIsfab=1;
+                }else {
+                    this.friendIsfab=0;
+                }
+
             }
+
         }
 
 
